@@ -1,55 +1,63 @@
 <?php
 // premier exercice
 echo "1°) ";
-class AdditionClass{
-	private $a;
-	private $b;
+class Narbonne{
+	private $ville;
+	private $departement;
 
-	function construct($a, $b){
-		$this->a = $a;
-		$this->b = $b;
+	function construct($ville, $departement){
+		$this->ville = $ville;
+		$this->departement = $departement;
 	}
-	public function addition(){
-		echo $this->a + $this->b;
+	public function localisation(){
+		echo "La ville " . $this->ville . " est dans le département " . $this->departement . ".";
 	}
-	public function appA($a){
-		$this->a = $a;
+	public function Appville($ville){
+		$this->ville = $ville;
 	}
-	public function appB($b){
-		$this->b = $b;
+	public function Appdepartement($departement){
+		$this->departement = $departement;
 	}
 }
 
-$add = new AdditionClass;
-$add->appA(4);
-$add->appB(4);
-$add->addition();
+$add = new Narbonne;
+$add->Appville("Narbonne");
+$add->Appdepartement("Aude");
+$add->localisation();
 
 // second exercice
 echo " <br/> 2°) ";
-class MoyenneClass{
-	private $a;
-	private $b;
+class Ville{
+	private $ville1;
+	private $ville2;
+	private $departement;
 
-	function constructBis($a, $b){
-		$this->a = $a;
-		$this->b = $b;
+	function construct($ville1, $ville2, $departement){
+		$this->villeUne = $ville1;
+		$this->villeDeux = $ville2;
+		$this->departement = $departement;
 	}
-	public function moyenne(){
-		echo ($this->a + $this->b)/2;
+	public function localisation(){
+		echo "La ville " . $this->villeUne . " est dans le département " . $this->departement . ". <br/>";
+		echo "La ville " . $this->villeDeux . " est dans le département " . $this->departement . ".";
 	}
-	public function appliA($a){
-		$this->a = $a;
+	public function AppvilleUne($ville1){
+		$this->villeUne = $ville1;
 	}
-	public function appliB($b){
-		$this->b = $b;
+	public function AppvilleDeux($ville2){
+		$this->villeDeux = $ville2;
+	}
+	public function Appdepartement($departement){
+		$this->departement = $departement;
 	}
 }
 
-$add = new MoyenneClass;
-$add->appliA(4);
-$add->appliB(4);
-$add->moyenne();
+$add = new Ville;
+$add->AppvilleUne("Narbonne");
+$add->AppvilleDeux("Carcassonne");
+$add->Appdepartement("Aude");
+$add->localisation();
+
 ?>
 
 <!DOCTYPE html>
